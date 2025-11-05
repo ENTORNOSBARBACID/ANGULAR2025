@@ -1,0 +1,51 @@
+<h2>Numero de cartas: {{objetos.length}}</h2>
+<div *ngIf="objetos.length < 5;then menosdecinco; else masdecinco"></div>
+
+<ul >
+    @for(i of objetos; track i; let c=$index){        
+        <li>
+            {{i}} | {{c + 1}}
+        </li>
+    }
+</ul>
+
+<!-- <ul >
+    <li *ngFor="let n of numeros; let c = index"
+    [style.color]="n % 2 == 0 ? 'green' : 'red'">
+        {{n}}
+    </li>
+</ul> -->
+
+<!-- <ul id="numeros">
+    <li *ngFor="let n of numeros; let c = index"
+    [class.par]="n % 2 == 0"
+    [class.impar]="n % 2 != 0">
+        {{n}}
+    </li>
+</ul> -->
+
+<ul id="numeros">
+    @for(n of numeros; track n){
+        @if(n % 2 == 0){
+            <li class="par">{{n}}</li>
+        }
+        @else{
+            <li class="impar">{{n}}</li>
+        }
+    }
+    @empty{
+        <li>Sin elementos</li>
+    }
+</ul>
+
+<ng-template #menosdecinco>
+    <h1 style="color:red">
+        Hay menos de 5 cartas¡¡
+    </h1>
+</ng-template>
+
+<ng-template #masdecinco>
+    <h1 style="color:red">
+        Hay mas de 5 cartas¡¡
+    </h1>
+</ng-template>

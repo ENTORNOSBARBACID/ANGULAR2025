@@ -1,0 +1,19 @@
+<h1>Formulario</h1>
+<h3>{{mensaje}}</h3>
+<form (ngSubmit)="recibirDatos()" #userForm="ngForm">
+    <label>Introduce nombre</label>
+    <input type="text" #cajanombre="ngModel" [(ngModel)]="user.nombre" name="cajanombre" ><br><br>
+    <label>Introduce apellidos</label>
+    <input type="text" #cajaapellido="ngModel" [(ngModel)]="user.apellido" name="cajaapellido" ><br><br>
+    <label>Introduce edad</label>
+    <input type="number" #cajaedad="ngModel" [(ngModel)]="user.edad" name="cajaedad" ><br><br>
+    <button>Crear usuario</button>
+</form>
+@if(mostrar){
+    <h2 style="color:blue">
+        {{user.apellido}}, {{user.nombre}}
+    </h2>
+    <h2 style="color:red">
+        {{user.edad}}
+    </h2>
+}

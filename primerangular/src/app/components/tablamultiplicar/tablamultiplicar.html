@@ -1,0 +1,29 @@
+<h1>Tabla Multiplicar</h1>
+<form #tabla>
+    <label>Introduce un numero</label>
+    <input type="number" #cajanum name="cajanum">
+    <button (click)="generarTabla()">Generar</button>
+</form>
+@if(mostrar){
+    <table>
+        <thead>
+            <tr>
+                <th>Operacion</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let i of diez">
+                    <td> {{numero.nativeElement.value}} * {{i}}</td>
+                    <td>{{numero.nativeElement.value * i}}</td>
+                </tr>
+            
+                <!-- @for(i of diez; track i){
+                    <tr>
+                    <td> {{numero.nativeElement.value}} * {{i}}</td>
+                    <td>{{numero.nativeElement.value * i}}</td>
+                </tr>
+                } -->
+        </tbody>
+    </table>
+}

@@ -1,0 +1,14 @@
+.par{
+    color:green;
+    margin:15px;
+}
+.impar{
+    color:red;
+    text-decoration: line-through;
+    margin-left:15px;
+}
+#numeros{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
