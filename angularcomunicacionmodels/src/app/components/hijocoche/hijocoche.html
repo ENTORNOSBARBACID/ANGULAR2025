@@ -1,0 +1,13 @@
+<div>
+    <h1 style="color:blue">
+        {{coche.marca}} {{coche.modelo}}
+    </h1>
+    <h2 [ngClass]="{
+        verde: coche.estado,
+        rojo: !coche.estado
+    }">
+    {{mensaje}}
+    </h2>
+    <h2>Velocidad actual: {{coche.velocidad}}</h2>
+    <button (click)="encenderCoche()">Star/stop</button> | <button (click)="acelerarCoche()">Acelerar coche</button> | <button (click)="seleccion()">Seleccionar favorito</button>
+</div>

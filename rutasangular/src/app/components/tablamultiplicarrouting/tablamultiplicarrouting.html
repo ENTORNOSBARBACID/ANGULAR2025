@@ -1,0 +1,20 @@
+<div class="multiplication-table-container">
+    <h1 class="table-title">Tabla del {{ numero }}</h1>
+
+    <table class="multiplication-table">
+      <thead>
+        <tr>
+          <th>Operación</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(i of diez; track i){
+          <tr>
+            <td>{{ numero }} &times; {{ i }} = </td>
+            <td>{{ numero * i }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>

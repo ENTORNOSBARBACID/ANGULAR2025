@@ -9,6 +9,8 @@ import { Cinecomponent } from './components/cinecomponent/cinecomponent';
 import { Menucomponent } from './menucomponent/menucomponent';
 import { Notfoundcomponent } from './components/notfoundcomponent/notfoundcomponent';
 import { Numerodoble } from './components/numerodoble/numerodoble';
+import { Tablamultiplicarrouting } from './components/tablamultiplicarrouting/tablamultiplicarrouting';
+import { Menutabla } from './components/menutabla/menutabla';
 
 
 
@@ -20,7 +22,9 @@ import { Numerodoble } from './components/numerodoble/numerodoble';
     Cinecomponent,
     Menucomponent,
     Notfoundcomponent,
-    Numerodoble
+    Numerodoble,
+    Tablamultiplicarrouting,
+    Menutabla
   ],
   imports: [
     BrowserModule, routing

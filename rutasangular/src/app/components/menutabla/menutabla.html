@@ -1,0 +1,5 @@
+<ul>
+  @for(n of numeros; track n){
+    <li><a [routerLink]="['/', 'tabla', n]">Tabla del {{n}}</a></li>
+}
+</ul>

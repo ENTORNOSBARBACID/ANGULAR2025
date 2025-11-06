@@ -1,1 +1,11 @@
-<p>numerodoble works!</p>
+<div>
+    <h1>Doble routing</h1>
+    @if(numero){
+        <h2>Numero recibido: {{numero}}</h2>
+        <h2>Numero doble : {{numero * 2}}</h2>
+    }@else{
+        <h2>No hemos recibido el parametro</h2>
+    }
+    <button style="background-color:red; border-radius:10px; width:100px; height: 30px" (click)="goToHome()">Volver</button>
+    <button style="background-color:green; border-radius:10px; width:100px; height: 30px" (click)="redirect()">Random</button>
+</div>

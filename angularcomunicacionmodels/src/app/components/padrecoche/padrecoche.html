@@ -1,0 +1,16 @@
+<div>
+    <h1 style="color:blue">Padre Coche</h1>
+    @if(cocheFav){
+        <div class="favorito" style="background-color: lightcoral">
+                <h1 style="color:red">
+            {{cocheFav.marca}} {{cocheFav.modelo}}
+        </h1>
+        <h2 style="color:red">Velocidad maxima: {{cocheFav.velocidad}}</h2>
+        </div>
+    }
+    @for(c of cochesArray; track c){
+        <hr>
+    <app-hijocoche [coche]="c" (seleccionarFavorito)="seleccionarFavorito($event)"></app-hijocoche>
+    <hr>
+    }
+</div>
