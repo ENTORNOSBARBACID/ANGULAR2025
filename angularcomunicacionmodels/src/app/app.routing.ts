@@ -7,7 +7,7 @@ import { Comicpadre } from "./components/comicpadre/comicpadre";
 const appRoutes: Routes =[
     {path : "", component: Listaproductos},
     {path : "coche", component: Padrecoche},
-    {path : "comic", component: Comicpadre},
+    {path : "comics", component: Comicpadre},
 ]
 
 //Desde esta clase debemos exportar el array de routes como provider

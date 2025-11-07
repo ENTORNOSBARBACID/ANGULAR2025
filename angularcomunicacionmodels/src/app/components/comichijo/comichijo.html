@@ -1,1 +1,7 @@
-<p>comichijo works!</p>
+<div style="float:left">
+    <h2>{{comic.nombre}}</h2>
+    <img src="{{comic.imagen}}" style="width: 200px; height: 300px">
+    <h2>{{comic.descripcion}}</h2>
+    <button (click)="seleccionarFavorito()">Seleccionar favorito</button>
+    <button (click)="eliminarComic()">Eliminar</button>
+</div>

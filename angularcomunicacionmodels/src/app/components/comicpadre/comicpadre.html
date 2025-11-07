@@ -1,1 +1,23 @@
-<p>comicpadre works!</p>
+<div>
+    <h1>Libreria comics</h1>
+     <form #createComic>
+        <label>Introduce nombre: </label>
+        <input type="text" #cajanombre name="cajanombre" class="form-control w-50 mx-auto"><br>
+        <label>Introduce imagen: </label>
+        <input type="text" #cajaimagen name="cajaimagen" class="form-control w-50 mx-auto"><br>
+        <label>Introduce descripcion: </label>
+        <input type="text" #cajadesc name="cajadesc" class="form-control w-50 mx-auto"><br>
+        <button (click)="crearComic()" class="btn btn-success">Crear</button>
+    </form>
+    @if(favorito){
+        <div style="background-color: lightcoral">
+            <h2>{{favorito.nombre}}</h2>
+            <img src="{{favorito.imagen}}" style="width: 200px; height: 300px">
+            <h2>{{favorito.descripcion}}</h2>
+        </div>
+    }
+    @for(c of comics; track c){
+        <app-comichijo [comic]="c" (favorito)="seleccionarFavorito($event)" (eliminar)="eliminarComic($event)"></app-comichijo>
+    }
+   
+</div>

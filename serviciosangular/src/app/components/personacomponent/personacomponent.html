@@ -1,0 +1,21 @@
+<div class="container-fluid bg-dark p-4" data-bs-theme="dark">
+
+  <h2 class="text-light text-center mb-3">Lista de Personas</h2>
+
+  <ul class="list-group w-75 mx-auto">
+
+    @for(p of personas; track p.IdPersona){ <li class="list-group-item list-group-item-dark d-flex justify-content-between align-items-start">
+        
+        <div class="ms-2 me-auto">
+          <div class="fw-bold fs-5">{{ p.Nombre }}</div>
+          <span class="text-body-secondary">{{ p.Email }}</span>
+          <small class="d-block text-body-secondary fst-italic">ID: {{p.IdPersona}}</small>
+        </div>
+        
+        <span class="badge bg-primary rounded-pill p-2 fs-6">{{ p.Edad }}</span>
+        
+      </li>
+    }
+  </ul>
+
+</div>

@@ -9,6 +9,9 @@ import { Padrecoche } from './components/padrecoche/padrecoche';
 import { Hijocoche } from './components/hijocoche/hijocoche';
 import { Comicpadre } from './components/comicpadre/comicpadre';
 import { Comichijo } from './components/comichijo/comichijo';
+import { FormsModule } from '@angular/forms';
+import { ServiceComics } from './services/serviceComics';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,10 +25,12 @@ import { Comichijo } from './components/comichijo/comichijo';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule
+  
   ],
   providers: [
-    provideBrowserGlobalErrorListeners(), appRoutingProvider
+    provideBrowserGlobalErrorListeners(), appRoutingProvider, ServiceComics, provideHttpClient()
   ],
   bootstrap: [App]
 })
