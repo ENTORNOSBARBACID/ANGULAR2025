@@ -1,0 +1,11 @@
+<div>
+    <form #createDept style="text-align:center" >
+        <label class="m-3">Introduce numero</label>
+        <input [(ngModel)]="cajanumero" name="cajanumero" type="text" class="form-control w-50 mx-auto">
+        <label class="m-3">Introduce nombre</label>
+        <input [(ngModel)]="cajanombre" name="cajanombre" type="text" class="form-control w-50 mx-auto">
+        <label class="m-3">Introduce localidad</label>
+        <input [(ngModel)]="cajaloc" name="cajaloc" type="text" class="form-control w-50 mx-auto">
+        <button class="btn btn-success m-3" (click)="create()">Crear</button>
+    </form>
+</div>

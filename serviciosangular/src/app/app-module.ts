@@ -7,19 +7,26 @@ import { Personacomponent } from './components/personacomponent/personacomponent
 import { provideHttpClient } from '@angular/common/http';
 import { ServicePersona } from '../service/servicePersona';
 import { Personasstandalone } from './components/personasstandalone/personasstandalone';
+import { Platillafuncionsimple } from './components/platillafuncionsimple/platillafuncionsimple';
+import { ServicePlantilla } from '../service/service.plantilla';
+import { Platillafuncionmultiple } from './components/platillafuncionmultiple/platillafuncionmultiple';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     App,
     Personacomponent,
+    Platillafuncionsimple,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    Personasstandalone
+    Personasstandalone,
+    FormsModule,
+    Platillafuncionmultiple
   ],
   providers: [
-    provideBrowserGlobalErrorListeners(), provideHttpClient(), ServicePersona
+    provideBrowserGlobalErrorListeners(), provideHttpClient(), ServicePersona, ServicePlantilla
   ],
   bootstrap: [App]
 })

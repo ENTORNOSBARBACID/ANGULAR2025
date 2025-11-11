@@ -1,0 +1,38 @@
+<div style="text-align: center">
+    <h1 class="text-primary m-3">Plantilla funcion simple</h1>
+    <select class="form-control w-50 mx-auto m-3" [(ngModel)]="funcion" multiple v-size="2">
+        @for(f of funciones; track f){
+            <option value="{{f}}">{{f}}</option>
+        }
+    </select>
+    <button class="btn btn-success" (click)="verFunciones()">Ver funciones</button>
+@if(plantilla.length > 0){
+
+    <table class="table table-bordered w-75 mx-auto">
+        <thead>
+            <tr>
+                <th>Id Empleado</th>
+                <th>Id Hospital</th>
+                <th>Id Sala</th>
+                <th>Apellido</th>
+                <th>Funcion</th>
+                <th>Turno</th>
+                <th>Salario</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(p of plantilla; track p){
+                <tr>
+                    <td>{{p.idEmpleado}}</td>
+                    <td>{{p.idHospital}}</td>
+                    <td>{{p.idSala}}</td>
+                    <td>{{p.apellido}}</td>
+                    <td>{{p.funcion}}</td>
+                    <td>{{p.turno}}</td>
+                    <td>{{p.salario}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}    
+</div>

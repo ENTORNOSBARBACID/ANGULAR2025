@@ -10,13 +10,7 @@
          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" [routerLink]="['/standalone']">StandAlone</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" [routerLink]="['/plantilla']">Plantilla</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" [routerLink]="['/plantillamultiple']">Plantilla Multiple</a>
+         <a class="nav-link active" aria-current="page" [routerLink]="['/', 'create']">Create</a>
        </li>
        <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menú</a>
@@ -32,4 +26,3 @@
    </div>
  </div>
 </nav>
-<router-outlet></router-outlet>
