@@ -1,0 +1,12 @@
+<div class="content">
+<div class="text-center w-50 ">
+    <h1 class="text-primary">Login</h1>
+    <form #loginForm class="form-control">
+        <label class=" my-3">Usuario:</label>
+        <input type="text" [(ngModel)]="name" name="name" class="form-control w-50 mx-auto">
+        <label class=" my-3">Contraseña:</label>
+        <input type="text" [(ngModel)]="password" name="password" class="form-control w-50 mx-auto">
+        <button class="btn btn-success m-4" (click)="getUser()">Login</button>
+    </form>
+</div>
+</div>

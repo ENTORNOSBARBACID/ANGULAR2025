@@ -1,0 +1,6 @@
+@if(!token){
+<app-login (updateToken)="updateToken($event)"></app-login>
+}@else{
+  <app-menu></app-menu>
+  <router-outlet></router-outlet>
+}

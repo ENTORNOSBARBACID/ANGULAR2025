@@ -15,7 +15,11 @@
                     <td>{{i.numero}}</td>
                     <td>{{i.nombre}}</td>
                     <td>{{i.localidad}}</td>
-                    <td><a class="btn btn-primary" [routerLink]="['/', 'update', i.numero]">Update</a></td>
+                    <td>
+                        <a class="btn btn-success mx-3" [routerLink]="['/', 'details', i.numero]">Details </a>
+                        <a class="btn btn-primary" [routerLink]="['/', 'update', i.numero]">Update </a>
+                        <button (click)="deleteDepart(i.numero)" class="btn btn-danger mx-3"> Delete</button>
+                    </td>
                 </tr>
             }
         </tbody>

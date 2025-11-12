@@ -24,17 +24,8 @@ export class Create {
       this.cajaloc,
     )
     console.log(newdept);
-    this._service.insertDepartamento(newdept).subscribe({
-    // 4. El console.log va AQUÍ (en 'next')
-    next: (response) => {
-      console.log("Insertado correctamente", response);
-      // Aquí también puedes redirigir al usuario, limpiar el form, etc.
-    },
-    // 5. Es vital manejar los errores
-    error: (err) => {
-      console.error("Error al insertar:", err);
-    }
-  });;
-  this._router.navigate(["/"])
+    this._service.insertDepartamento(newdept).subscribe(response=>{
+      this._router.navigate(["/"])
+    })
   }
 }

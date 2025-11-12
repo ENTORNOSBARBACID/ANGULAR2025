@@ -1,0 +1,15 @@
+<div class="text-center">
+    @for(subordinado of subordinados; track subordinado){
+        <hr>
+    <h1 class="text-primary text-decoration-underline">Id:{{subordinado.idEmpleado}}</h1>
+    <br>
+    <h3 class="text-danger">Apellido: {{subordinado.apellido}}</h3>
+    <h3 class="text-danger">Oficio: {{subordinado.oficio}}</h3>
+    <h3 class="text-danger">Salario: {{subordinado.salario}}</h3>
+    <h3 class="text-danger">Director: {{subordinado.director}}</h3>
+    <hr>
+    }
+    @if(subordinados.length<=0){
+        <h1 class="text-danger h-1">NO HAY SUBORDINADOS</h1>
+    }
+</div>

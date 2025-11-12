@@ -2,7 +2,7 @@ import { Departamento } from './../models/Departamento';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { Observable, from } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 @Injectable({
@@ -33,6 +33,16 @@ export class ServiceDepartamentos {
 
     updateDepartamento(depart:Departamento):Observable<any>{
       var request="api/departamentos";
-      return this._http.put(this.url+request, depart);
+      let json=JSON.stringify(depart);
+      let header=new HttpHeaders().set("Content-type", "application/json");
+      
+      return this._http.put(this.url+request, json, {headers:header})
+      // return this._http.put(this.url+request, depart);
+
+    }
+
+    deleteDepart(id:number):Observable<any>{
+      var request="api/departamentos/"+id
+      return this._http.delete(this.url+request);
     }
 }

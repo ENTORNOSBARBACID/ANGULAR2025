@@ -15,13 +15,24 @@ export class Departamentos implements OnInit{
 
   public departamentos:Departamento[]=[]
 
-  constructor(private _service:ServiceDepartamentos){}
+  constructor(private _service:ServiceDepartamentos){
+  }
 
   ngOnInit(): void {
+    this.loadDepartamentos()
+  }
+
+  loadDepartamentos(){
     this._service.getDepartamentos().subscribe(response=>{
       this.departamentos=response;
-      console.log(this.departamentos)
     })
   }
 
+  deleteDepart(id:number){
+    this._service.deleteDepart(id).subscribe(response=>{
+      console.log(response)
+      this.loadDepartamentos()
+    })
+  }
+  
 }

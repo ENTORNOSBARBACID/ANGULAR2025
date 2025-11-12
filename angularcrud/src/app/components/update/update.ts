@@ -44,18 +44,10 @@ export class Update implements OnInit{
       this.cajanombre,
       this.cajaloc,
     )
-    this._service.updateDepartamento(newdept).subscribe({
-    // 4. El console.log va AQUÍ (en 'next')
-    next: (response) => {
-      console.log("Updateado correctamente", response);
-      // Aquí también puedes redirigir al usuario, limpiar el form, etc.
-    },
-    // 5. Es vital manejar los errores
-    error: (err) => {
-      console.error("Error al Updatear:", err);
-    }
-  });;
-  this._router.navigate(["/"]);
+    this._service.updateDepartamento(newdept).subscribe(response=>{
+      console.log(response)
+      this._router.navigate(["/"]);
+    });
   }
 }
 
