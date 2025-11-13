@@ -1,0 +1,35 @@
+<div class="container mt-4">
+            <div class="row g-4">
+                
+                
+                @for (d of jugadores; track d) {
+                    <div class="col-12 col-md-6 col-lg-4 d-flex">
+                        
+        <div class="card shadow-sm h-100 w-100">
+          
+          <img [src]="d.imagen" 
+               class="card-img-top" 
+               alt="Foto de {{ d.nombre }}"
+               style="height: 240px; object-fit: cover;">
+          
+          <div class="card-body text-center">
+            <h5 class="card-title mb-1">{{ d.nombre }}</h5>
+            <p class="card-text text-muted">{{ d.posicion }}</p> 
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong>Nacimiento:</strong>
+              <span>{{ d.fechaNacimiento}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong>País:</strong>
+              <span>{{ d.pais }}</span> 
+            </li>
+          </ul>
+
+        </div></div>}
+     </div></div>
+@if(jugadores.length==0){
+    <h1>No se encontraron jugadores</h1>
+}

@@ -1,0 +1,10 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.equipo{
+    width: 35%;
+}
+.plantilla{
+    width: 65%;
+}

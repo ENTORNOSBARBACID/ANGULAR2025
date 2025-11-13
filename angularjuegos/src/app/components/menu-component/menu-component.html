@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    
+    <a class="navbar-brand d-flex align-items-center" [routerLink]="['/']">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-dribbble me-2" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1.54 8H0A8.001 8.001 0 0 1 8 0a8.003 8.003 0 0 1 7.46 5.044l-1.06-.353A6.004 6.004 0 0 0 8 2a6.002 6.002 0 0 0-5.873 4.417l-.001.03-.086.553zM2.8 7.5a6.002 6.002 0 0 1 5.2-4.417c.18.17.35.345.51.53l-1.06.353a5.002 5.002 0 0 0-4.32 3.27l.086-.553zm.18 1.002A5.002 5.002 0 0 0 8 13.5a5.002 5.002 0 0 0 4.67-3.565l.086-.553a6.002 6.002 0 0 1-5.2 4.417c-.18-.17-.35-.345-.51-.53l1.06-.353zM13.2 8.5a6.002 6.002 0 0 1-5.2 4.417c-.18-.17-.35-.345-.51-.53l1.06-.353a5.002 5.002 0 0 0 4.32-3.27l-.086.553zm.18-1.002A5.002 5.002 0 0 0 8 2.5a5.002 5.002 0 0 0-4.67 3.565l-.086.553a6.002 6.002 0 0 1 5.2-4.417c.18.17.35.345.51.53l-1.06.353zM14.46 8H16A8.001 8.001 0 0 1 8 16a8.003 8.003 0 0 1-7.46-5.044l1.06.353A6.004 6.004 0 0 0 8 14a6.002 6.002 0 0 0 5.873-4.417l.001-.03.086-.553z"/>
+      </svg>
+      Mi Futbol App
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContenido">
+      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+        </li>
+       <li class="nav-item dropdown">
+
+  <a class="nav-link dropdown-toggle" 
+     href="#" 
+     role="button" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false">
+    Equipos
+  </a>
+
+  <ul class="dropdown-menu">
+    @for(e of equipos; track e){
+    
+    <li>
+      <a class="dropdown-item" [routerLink]="['/', 'equipos', e.idEquipo]">{{e.nombre}}</a>
+    </li>
+    }
+  </ul>
+</li>
+      </ul>
+      
+      <form class="d-flex" role="search">
+        <input  class="form-control me-2" type="search" placeholder="Buscar equipo..." aria-label="Search" (change)="buscarJugador()" [(ngModel)]="nombre" name="nombre">
+      </form>
+    </div>
+  </div>
+</nav>
